@@ -55,10 +55,10 @@ bindsym $mod+F4 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle &
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use playerctl to play Spotify
-bindsym $mod+F5 exec --no-startup-id "playerctl -p spotify stop"
-bindsym $mod+F6 exec --no-startup-id "playerctl -p spotify previous"
-bindsym $mod+F7 exec --no-startup-id "playerctl -p spotify play-pause"
-bindsym $mod+F8 exec --no-startup-id "playerctl -p spotify next"
+bindsym $mod+F5 exec --no-startup-id "playerctl stop"
+bindsym $mod+F6 exec --no-startup-id "playerctl previous"
+bindsym $mod+F7 exec --no-startup-id "playerctl play-pause"
+bindsym $mod+F8 exec --no-startup-id "playerctl next"
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 

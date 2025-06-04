@@ -1,9 +1,9 @@
 #! /usr/bin/env zsh
 set -eu
 
-if [[ pulseaudio ]]; then
-  pulseaudio -D
-fi
+# if [[ pulseaudio ]]; then
+#   pulseaudio -D
+# fi
 
 # Get the ID for the current DEFAULT_SINK
 defaultSink=$(pactl info | grep "Default Sink: " | awk '{ print $3 }')
