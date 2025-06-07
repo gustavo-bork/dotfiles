@@ -44,7 +44,8 @@ bindsym $mod+x exec ~/.config/i3/i3lock
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-exec "xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 143.92 --right-of eDP-1"
+exec "xrandr --output HDMI-1-0 --primary --mode 1920x1080 --rate 143.92"
+exec "xrandr --output eDP-1 --off"
 
 # Use pactl to adjust volume in PulseAudio.
 exec ~/.config/i3/toggle_sink.sh
