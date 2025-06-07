@@ -90,6 +90,9 @@ plugins=(
   zsh-autocomplete
   zsh-autosuggestions
   zsh-syntax-highlighting
+  yarn
+  rust
+  web-search
 )
 
 autoload -U compinit && compinit
