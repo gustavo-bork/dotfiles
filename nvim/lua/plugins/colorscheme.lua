@@ -1,12 +1,18 @@
 return {
   {
-    "folke/tokyonight.nvim",
-    opts = {
-      transparent = true,
-      styles = {
-        sidebars = "transparent",
-        floats = "transparent",
-      },
-    },
+    "maxmx03/fluoromachine.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      local fm = require("fluoromachine")
+
+      fm.setup({
+        glow = false,
+        theme = "retrowave",
+        transparent = true,
+      })
+
+      vim.cmd.colorscheme("fluoromachine")
+    end,
   },
 }
