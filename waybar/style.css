@@ -76,6 +76,22 @@ window#waybar {
   margin: 5px 5px;
   padding: 1px 1px 1px 6px;
 }
+
+#custom-lock {
+  margin: 5px 5px;
+  padding: 1px 1px 1px 6px;
+}
+
+#custom-reboot {
+  margin: 5px 5px;
+  padding: 1px 1px 1px 6px;
+}
+
+#custom-quit {
+  margin: 5px 5px;
+  padding: 1px 1px 1px 6px;
+}
+
 /*-----Indicators----*/
 #idle_inhibitor.activated {
   color: #2dcc36;
@@ -99,4 +115,9 @@ window#waybar {
 
 #temperature.critical {
   color: #cc3436;
+}
+
+#group-power {
+  margin-left: 5px;
+  margin-right: 5px;
 }
