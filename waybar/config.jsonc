@@ -7,6 +7,7 @@
     "network",
     "pulseaudio",
     "battery",
+    "backlight",
     "group/group-power"
   ],
   "sway/mode": {
@@ -56,6 +57,11 @@
       "default": ["", "", ""]
     },
     "on-click": "pavucontrol"
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{percent}% {icon}",
+    "format-icons": ["", ""]
   },
   "battery": {
     "interval": 60,
