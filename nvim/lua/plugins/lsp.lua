@@ -6,8 +6,6 @@ return {
         filetypes = {
           "html",
           "css",
-          "javascript",
-          "typescript",
           "javascriptreact",
           "typescriptreact",
         },
