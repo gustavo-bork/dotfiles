@@ -31,8 +31,17 @@ output * bg ~/.dotfiles/car-with-full-moon-background.jpg fill
 #
 # Example configuration:
 #
-  output eDP-1 resolution 1920x1080@120Hz position 1920 0
-  output HDMI-3 resolution 1920x1080 position 1920 0
+  output eDP-1 {
+    resolution 1920x1080@120Hz
+    scale 1
+    pos 1920 0
+  }
+
+  output HDMI-A-3 {
+    resolution 1920x1080@144Hz
+    scale 1
+    pos 0 0
+  }
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -59,6 +68,12 @@ bindsym $mod+x exec swaylock
     xkb_layout "us,br"
     xkb_variant "intl,"
     xkb_options "grp:win_space_toggle"
+    xkb_numlock enabled
+  }
+
+  input "type:touchpad" {
+      tap enabled
+      natural_scroll enabled
   }
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
@@ -159,6 +174,9 @@ bindsym $mod+x exec swaylock
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
+
+    for_window [window_type="dialog"] floating enable
+    for_window [window_role="dialog"] floating enable
 
     # Swap focus between the tiling area and the floating area
     bindsym $mod+space focus mode_toggle
