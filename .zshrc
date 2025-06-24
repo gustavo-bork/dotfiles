@@ -6,8 +6,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -87,12 +85,13 @@ plugins=(
   python
   tmux
   themes
-  zsh-autocomplete
-  zsh-autosuggestions
   zsh-syntax-highlighting
+  zsh-autosuggestions
+  zsh-autocomplete
   yarn
   rust
   web-search
+  jsontools
 )
 
 autoload -U compinit && compinit
@@ -132,3 +131,5 @@ export EDITOR='nvim'
 
 export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+export PATH=$PATH:/home/gustavo/.spicetify
