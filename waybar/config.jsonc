@@ -1,6 +1,6 @@
 {
   "modules-left": ["sway/workspaces", "sway/mode"],
-  "modules-center": ["clock", "idle_inhibitor"],
+  "modules-center": ["clock", "custom/media"],
   "modules-right": [
     "tray",
     "sway/language",
@@ -16,6 +16,15 @@
   "sway/language": {
     "format": "{short}",
     "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
+  },
+  "custom/media": {
+    "format": "{icon} {}",
+    "escape": true,
+    "return-type": "json",
+    "max-length": 40,
+    "on-click": "playerctl play-pause",
+    "smooth-scrolling-threshold": 10,
+    "exec": "playerctl metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
   },
   "network": {
     "format-wifi": "{essid} ({signalStrength}%) ",
@@ -42,8 +51,8 @@
   },
   "pulseaudio": {
     "format": "{volume}% {icon} ",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon}  {format_source}",
+    "format-bluetooth-muted": " {icon}  {format_source}",
     "format-muted": "0% {icon} ",
     "format-source": "{volume}% ",
     "format-source-muted": "",
