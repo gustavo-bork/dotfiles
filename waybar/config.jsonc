@@ -1,26 +1,41 @@
 {
-  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-left": ["hyprland/workspaces", "hyprland/window", "hyprland/submap"],
   "modules-center": ["clock", "custom/media"],
   "modules-right": [
     "tray",
-    "sway/language",
+    "hyprland/language",
     "network",
     "pulseaudio",
     "battery",
     "backlight",
     "group/group-power"
   ],
-  "sway/mode": {
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "format-window-separator": " | "
+  },
+  "hyprland/window": {
+    "format": "{}",
+    "rewrite": {
+      "(.*) — Zen Browser": "$1"
+    },
+    "separate-outputs": true
+  },
+  "hyprland/submap": {
     "format": "<span style=\"italic\">{}</span>"
   },
-  "sway/language": {
+  "hyprland/language": {
     "format": "{short}",
-    "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
+    "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
   },
   "custom/media": {
-    "format": "{icon} {}",
+    "format": "{icon} {text}",
     "escape": true,
     "return-type": "json",
+    "format-icons": {
+      "Playing": " ",
+      "Paused": " "
+    },
     "max-length": 40,
     "on-click": "playerctl play-pause",
     "smooth-scrolling-threshold": 10,
@@ -93,12 +108,12 @@
   "custom/quit": {
     "format": "󰗼",
     "tooltip": false,
-    "on-click": "swaymsg exit"
+    "on-click": "hyprctl dispatch exit"
   },
   "custom/lock": {
     "format": "󰍁",
     "tooltip": false,
-    "on-click": "~/.config/sway/swaylock"
+    "on-click": "hyprlock"
   },
   "custom/reboot": {
     "format": "󰜉",
