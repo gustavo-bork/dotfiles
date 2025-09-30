@@ -133,3 +133,5 @@ export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 export PATH=$PATH:/home/gustavo/.spicetify
+
+alias update_discord='sudo pacman -Syy discord'
