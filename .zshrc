@@ -132,6 +132,8 @@ export EDITOR='nvim'
 export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-export PATH=$PATH:/home/gustavo/.spicetify
+export PATH=$PATH:$HOME/.spicetify:$HOME/.dotnet/tools
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$DOTNET_ROOT
 
 alias update_discord='sudo pacman -Syy discord'
