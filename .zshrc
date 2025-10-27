@@ -136,4 +136,4 @@ export PATH=$PATH:$HOME/.spicetify:$HOME/.dotnet/tools
 export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$PATH:$DOTNET_ROOT
 
-alias update_discord='sudo pacman -Syy discord'
+alias update_package='sudo pacman -Syy'
