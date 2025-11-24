@@ -5,6 +5,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+if [ -d "$HOME/platform-tools" ] ; then
+ export PATH="$HOME/platform-tools:$PATH"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
