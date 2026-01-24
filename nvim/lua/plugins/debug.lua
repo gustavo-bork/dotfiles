@@ -12,6 +12,7 @@ return {
   },
   opts = function()
     local dap = require("dap")
+
     if not dap.adapters["pwa-node"] then
       dap.adapters["pwa-node"] = {
         type = "server",
@@ -27,6 +28,7 @@ return {
         },
       }
     end
+
     if not dap.adapters["node"] then
       dap.adapters["node"] = function(cb, config)
         if config.type == "node" then
@@ -67,5 +69,27 @@ return {
         }
       end
     end
+
+    local mason_path = vim.fn.stdpath("data") .. "/mason/packages/netcoredbg/netcoredbg"
+
+    local netcoredbg_adapter = {
+      type = "executable",
+      command = mason_path,
+      args = { "--interpreter=vscode" },
+    }
+
+    dap.adapters.netcoredbg = netcoredbg_adapter
+    dap.adapters.coreclr = netcoredbg_adapter
+
+    dap.configurations.cs = {
+      {
+        type = "coreclr",
+        name = "launch - netcoredbg",
+        request = "launch",
+        program = function()
+          return vim.fn.input("Path to dll: ", vim.fn.getcwd() .. "/bin/Debug/net9.0/", "file")
+        end,
+      },
+    }
   end,
 }
