@@ -13,7 +13,7 @@ fi
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-export PATH="$PATH:$HOME/.tmuxifier/bin:/opt/nvim-linux-x86_64/bin"
+export PATH="$PATH:$HOME/.tmuxifier/bin:/opt/nvim-linux-x86_64/bin:$HOME/.local/bin"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
