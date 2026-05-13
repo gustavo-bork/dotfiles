@@ -32,6 +32,7 @@ return {
         "vtsls",
         "tree-sitter-cli",
         "prettier",
+        "jinja-lsp",
       },
     },
   },
