@@ -4,7 +4,9 @@ local fileManager = "dolphin"
 local menu = "rofi -show drun"
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen("maximized", "toggle"))
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(
 	mainMod .. " + M",
