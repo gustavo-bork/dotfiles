@@ -75,8 +75,8 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tru
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
 -- Notebook Lid
-hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("~/.config/hypr/lid_switch.sh close"), { locked = true })
-hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd("~/.config/hypr/lid_switch.sh open"), { locked = true })
+hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("wlr-randr --output eDP-1 --off"), { locked = true })
+hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd("wlr-randr --output eDP-1 --on"), { locked = true })
 
 -- Take screenshots
 hl.bind("Print", hl.dsp.exec_cmd("hyprshot -m region"))
